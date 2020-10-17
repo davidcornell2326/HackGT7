@@ -1,0 +1,62 @@
+<!doctype=html>
+<html lang=en>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/Website.css">
+        <title>
+            Generated Document
+        </title>
+    </head>
+    <body>
+
+        <h2 id="docName">Temp</h2>
+        <h4 id="docText">Temp</h4>
+        <br>
+        <button onclick="goToHome()">Go to the Home Page</button>
+
+        <script>
+ 
+        var queryString = decodeURIComponent(window.location.search);
+        queryString = queryString.substring(1);
+        var queries = queryString.split("&");
+
+        var docName = queries[0].substring(4);
+        queries = queries.slice(1);
+
+        if (docName === "constitutionPreamble") {
+            docName = "Constitution Preamble";
+            var docText = "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.";
+            var changeWords = ["People", "United States", "perfect", "Justice", "Tranquility", "defence", "Blessings of Liberty", "Posterity",  "ordain", "Constitution", "America"];
+        } else if (docName === "declarationPreamble") {
+            docName = "Declaration of Independence Preamble";
+            var docText = "When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.";
+            var changeWords = ["events", "dissolve", "political", "another", "earth", "equal", "Laws", "Nature", "God", "opinions"];
+        }
+
+        for (var i = 0; i < queries.length; i++) {
+            if (queries[i].substring(2) === "") {
+                queries[i] = queries[i].substring(0,2) + "EMPTY";
+            }
+            docText = docText.replaceAll(changeWords[i], queries[i].substring(2));
+        }
+        document.getElementById("docName").innerHTML = docName;
+        document.getElementById("docText").innerHTML = docText;
+
+
+        function goToHome() {
+            window.location.href = "../";
+        }
+
+
+    </script>
+
+         
+    </body>
+
+
+
+
+
+
+    
+
+</html>
