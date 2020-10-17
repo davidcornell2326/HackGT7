@@ -4,17 +4,32 @@
 <title>Acknowledgement</title>
 </head>
 <body>
-<h4>These are the data from the user entry page, which can be manipulated in this html file's javascript.</h4>
 <script>
  
 var queryString = decodeURIComponent(window.location.search);
 queryString = queryString.substring(1);
 var queries = queryString.split("&");
-for (var i = 0; i < queries.length; i++)
-{
-  document.write(queries[i] + "<br>");
+
+var docName = queries[0].substring(4);
+queries = queries.slice(1);
+
+if (docName === "constitutionPreamble") {
+	var documentText = "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.";
+	var changeWords = ["People", "United States", "perfect", "Justice", "Tranquility", "defence", "Blessings of Liberty", "Posterity",  "ordain", "Constitution", "America"];
+} else if (docName === "declarationPreamble") {
+	var documentText = "When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.";
+	var changeWords = ["events", "dissolve", "political", "another", "earth", "equal", "Laws", "Nature", "God", "opinions"];
 }
- 
+
+for (var i = 0; i < queries.length; i++) {
+	if (queries[i].substring(2) === "") {
+		queries[i] = queries[i].substring(0,2) + "EMPTY";
+	}
+	documentText = documentText.replace(changeWords[i], queries[i].substring(2));
+}
+
+document.write(documentText)
+
 function goToHome() {
   	window.location.href = "../";
 }

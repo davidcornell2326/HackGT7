@@ -8,43 +8,25 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/Website.css">
 
 		<h1 class="header" id="name">
-            GAPS IN HISTORY
+            Choose a Document
         </h1>
-        <h2>
-            <a href="Documents.html" title="Documents" alt="Documents"><button class="header" id="Documents">Documents</button></a>
-        </h2>
-        <h2>
-            <a href="Reimagine.html" title="Reimagine" alt="Reimagine"><button class="header" id="Reimagine">Reimagine</button></a>
-        </h2>
-        <h2>
-            <a href="Result.html" title="Result" alt="Result"><button class="header" id="Result">Result</button></a>
-        </h2>
-		<h2>
-    		<a href="Share.html" title="Share"  alt="Share"><button class="header" id="Share">Share</button></a>
-		</h2>
 		<h3>
 		<img id ="paper" src="/old-stained-paper-texture-free.jpg" width="1920" height="1080" alt="paper">
 		</h3>
 
-
-<button class="choose">Declaration of Independence</button>
-<button class="choose">Hamlet</button>
+<button class="choose" onclick="goToUserEntry('constitutionPreamble')">Constitution Preamble</button>
+<button class="choose" onclick="goToUserEntry('declarationPreamble')">Declaration of Independence Preamble</button>
 <button class="choose">???</button>
 <button class="choose">???</button>
 <button class="choose">???</button>
+<button class="choose">???</button>
 
 
-<!--<script>
-    function myFunction() {
-        var value1=document.getElementById("1").value;
-        var value2=document.getElementById("2").value;
-        var value3=document.getElementById("3").value;
-        var value4=document.getElementById("4").value;
-        var value5=document.getElementById("5").value;
-        var queryString = "?1=" + value1 + "&2=" + value2 + "&3=" + value3 + "&4=" + value4 + "&5=" + value5;
-        window.location.href = "documentDisplay/" + queryString;
+<script>
+    function goToUserEntry(docName) {
+        window.location.href = "../userEntry/?doc=" + docName;
     }
-</script> -->
+</script> 
 <p>
 	
 
