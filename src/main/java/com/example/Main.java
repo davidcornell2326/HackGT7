@@ -86,6 +86,11 @@ public class Main {
       return "documentDisplay";
   }
 
+  @RequestMapping("/Documents")
+  String Documents() {
+      return "Documents";
+  }
+
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
