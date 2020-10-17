@@ -48,6 +48,15 @@ h5 {
     margin-right: 10%;
     margin-top: 100;
 }
+h6 {
+    font-family: Baskerville;
+    color: black;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50;
+    font-size: 1.5em;
+}
 
 button {
     font-family: Baskerville;
@@ -83,6 +92,15 @@ input {
     top: 600px;
     transform: translateY(-100%);
 }
+#homePage {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    left: 43%;
+    top: 100%;
+    top: 600px;
+    transform: translateY(-100%);
+}
 p {
     width: 1920px;
     height:580px;
@@ -90,8 +108,8 @@ p {
 
 
 #Documents {
-    top: 20px;
-    right: 325px;
+    top: 70%;
+    right: 70%;
 }
 
 #Reimagine {
@@ -135,8 +153,8 @@ p {
         margin-top: 50px;
     }
     #Documents {
-        top: 20px;
-        left: 0%;
+        top: 70%;
+        right: 0%;
     }
 
     #Reimagine {
@@ -174,8 +192,8 @@ p {
         margin-top: -5px;
     }
     #Documents {
-        top: 20px;
-        left: 32%;
+        top: 70%;
+        left: 62%;
     }
 
     #Reimagine {
