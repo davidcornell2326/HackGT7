@@ -38,6 +38,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Map;
 
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
 @Controller
 @SpringBootApplication
 public class Main {
@@ -51,6 +55,8 @@ public class Main {
   public static void main(String[] args) throws Exception {
     SpringApplication.run(Main.class, args);
   }
+
+
 
   @RequestMapping("/")
   String index() {
@@ -71,11 +77,14 @@ public class Main {
   }
 
   @RequestMapping("/test")
-  String test(Map<String, Object> model) {
-      model.put("testing", "TESTING");
+  String test() {
       return "test";
   }
   
+  @RequestMapping("/test2/*")
+  String test2() {
+      return "test2";
+  }
 
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
