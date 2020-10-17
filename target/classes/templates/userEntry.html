@@ -5,6 +5,21 @@
 </head>
 <body>
 
+<style>
+.bar {
+    overflow-x: hidden;
+}
+
+.container {
+    display: table;
+}
+
+.contents {
+    display: table-cell;
+    vertical-align: middle;
+}
+</style>
+
 <link rel="stylesheet" type="text/css" href="/stylesheets/Website.css">
 
 		<h1 class="header" id="name">
@@ -20,6 +35,9 @@
 
 <button onclick="displayDocument()" id="changeHistory">Change History</button>
 
+<div style="object-position:center">
+	<!-- <div class="container">
+		<div class="contents"> -->
 
 <script>
 
@@ -30,144 +48,247 @@
 
 	switch(docName) {
 		case "constitutionPreamble":
-			var txt1 = document.createTextNode("People:");
 			var in1 = document.createElement("INPUT");
 			in1.id = "1";
-			var txt2 = document.createTextNode("United States");
+			in1.placeholder = "TEST";
 			var in2 = document.createElement("INPUT");
 			in2.id = "2";
-			var txt3 = document.createTextNode("perfect");
+			in2.placeholder = "TEST";
 			var in3 = document.createElement("INPUT");
 			in3.id = "3";
-			var txt4 = document.createTextNode("Justice");
+			in3.placeholder = "TEST";
 			var in4 = document.createElement("INPUT");
 			in4.id = "4";
-			var txt5 = document.createTextNode("Tranquility");
+			in4.placeholder = "TEST";
 			var in5 = document.createElement("INPUT");
 			in5.id = "5";
-			var txt6 = document.createTextNode("defence");
+			in5.placeholder = "TEST";
 			var in6 = document.createElement("INPUT");
 			in6.id = "6";
-			var txt7 = document.createTextNode("Blessings");
+			in6.placeholder = "TEST";
 			var in7 = document.createElement("INPUT");
 			in7.id = "7";
-			var txt8 = document.createTextNode("Liberty");
+			in7.placeholder = "TEST";
 			var in8 = document.createElement("INPUT");
 			in8.id = "8";
-			var txt9 = document.createTextNode("Posterity");
+			in8.placeholder = "TEST";
 			var in9 = document.createElement("INPUT");
 			in9.id = "9";
-			var txtA = document.createTextNode("ordain");
+			in9.placeholder = "TEST";
 			var inA = document.createElement("INPUT");
 			inA.id = "A";
-			var txtB = document.createTextNode("Constitution");
+			inA.placeholder = "TEST";
 			var inB = document.createElement("INPUT");
 			inB.id = "B";
-			var txtC = document.createTextNode("America");
+			inB.placeholder = "TEST";
 			var inC = document.createElement("INPUT");
 			inC.id = "C";
+			inC.placeholder = "TEST";
 
 			var element = document.getElementById("fields");
 			element.appendChild(br);
-			element.appendChild(txt1);
 			element.appendChild(in1);
 			element.appendChild(br);
-			element.appendChild(txt2);
 			element.appendChild(in2);
 			element.appendChild(br);
-			element.appendChild(txt3);
 			element.appendChild(in3);
 			element.appendChild(br);
-			element.appendChild(txt4);
 			element.appendChild(in4);
 			element.appendChild(br);
-			element.appendChild(txt5);
 			element.appendChild(in5);
 			element.appendChild(br);
-			element.appendChild(txt6);
 			element.appendChild(in6);
 			element.appendChild(br);
-			element.appendChild(txt7);
 			element.appendChild(in7);
 			element.appendChild(br);
-			element.appendChild(txt8);
 			element.appendChild(in8);
 			element.appendChild(br);
-			element.appendChild(txt9);
 			element.appendChild(in9);
 			element.appendChild(br);
-			element.appendChild(txtA);
 			element.appendChild(inA);
 			element.appendChild(br);
-			element.appendChild(txtB);
 			element.appendChild(inB);
 			element.appendChild(br);
-			element.appendChild(txtC);
 			element.appendChild(inC);
 			break;
 		case "declarationPreamble":
-			var txt1 = document.createTextNode("events:");
 			var in1 = document.createElement("INPUT");
 			in1.id = "1";
-			var txt2 = document.createTextNode("dissolve");
+			in1.placeholder = "";
 			var in2 = document.createElement("INPUT");
 			in2.id = "2";
-			var txt3 = document.createTextNode("political");
+			in1.placeholder = "";
 			var in3 = document.createElement("INPUT");
 			in3.id = "3";
-			var txt4 = document.createTextNode("another");
+			in1.placeholder = "";
 			var in4 = document.createElement("INPUT");
 			in4.id = "4";
-			var txt5 = document.createTextNode("earth");
+			in1.placeholder = "";
 			var in5 = document.createElement("INPUT");
 			in5.id = "5";
-			var txt6 = document.createTextNode("equal");
+			in1.placeholder = "";
 			var in6 = document.createElement("INPUT");
 			in6.id = "6";
-			var txt7 = document.createTextNode("Laws");
+			in1.placeholder = "";
 			var in7 = document.createElement("INPUT");
 			in7.id = "7";
-			var txt8 = document.createTextNode("Nature");
+			in1.placeholder = "";
 			var in8 = document.createElement("INPUT");
 			in8.id = "8";
-			var txt9 = document.createTextNode("God");
+			in1.placeholder = "";
 			var in9 = document.createElement("INPUT");
 			in9.id = "9";
-			var txtA = document.createTextNode("opinions");
+			in1.placeholder = "";
 			var inA = document.createElement("INPUT");
 			inA.id = "A";
+			in1.placeholder = "";
 
 			var element = document.getElementById("fields");
 			element.appendChild(br);
-			element.appendChild(txt1);
 			element.appendChild(in1);
 			element.appendChild(br);
-			element.appendChild(txt2);
 			element.appendChild(in2);
 			element.appendChild(br);
-			element.appendChild(txt3);
 			element.appendChild(in3);
 			element.appendChild(br);
-			element.appendChild(txt4);
 			element.appendChild(in4);
 			element.appendChild(br);
-			element.appendChild(txt5);
 			element.appendChild(in5);
 			element.appendChild(br);
-			element.appendChild(txt6);
 			element.appendChild(in6);
 			element.appendChild(br);
-			element.appendChild(txt7);
 			element.appendChild(in7);
 			element.appendChild(br);
-			element.appendChild(txt8);
 			element.appendChild(in8);
 			element.appendChild(br);
-			element.appendChild(txt9);
 			element.appendChild(in9);
 			element.appendChild(br);
-			element.appendChild(txtA);
 			element.appendChild(inA);
+
+			break;
+			case "billPreamble":
+			var in1 = document.createElement("INPUT");
+			in1.id = "1";
+			in1.placeholder = "";
+			var in2 = document.createElement("INPUT");
+			in2.id = "2";
+			in1.placeholder = "";
+			var in3 = document.createElement("INPUT");
+			in3.id = "3";
+			in1.placeholder = "";
+			var in4 = document.createElement("INPUT");
+			in4.id = "4";
+			in1.placeholder = "";
+			var in5 = document.createElement("INPUT");
+			in5.id = "5";
+			in1.placeholder = "";
+			var in6 = document.createElement("INPUT");
+			in6.id = "6";
+			in1.placeholder = "";
+			var in7 = document.createElement("INPUT");
+			in7.id = "7";
+			in1.placeholder = "";
+			var in8 = document.createElement("INPUT");
+			in8.id = "8";
+			in1.placeholder = "";
+			var in9 = document.createElement("INPUT");
+			in9.id = "9";
+			in1.placeholder = "";
+			var inA = document.createElement("INPUT");
+			inA.id = "A";
+			in1.placeholder = "";
+
+			var element = document.getElementById("fields");
+			element.appendChild(br);
+			element.appendChild(in1);
+			element.appendChild(br);
+			element.appendChild(in2);
+			element.appendChild(br);
+			element.appendChild(in3);
+			element.appendChild(br);
+			element.appendChild(in4);
+			element.appendChild(br);
+			element.appendChild(in5);
+			element.appendChild(br);
+			element.appendChild(in6);
+			element.appendChild(br);
+			element.appendChild(in7);
+			element.appendChild(br);
+			element.appendChild(in8);
+			element.appendChild(br);
+			element.appendChild(in9);
+			element.appendChild(br);
+			element.appendChild(inA);
+			break;
+
+			case "hamlet":
+			var in1 = document.createElement("INPUT");
+			in1.id = "1";
+			in1.placeholder = "";
+			var in2 = document.createElement("INPUT");
+			in2.id = "2";
+			in1.placeholder = "";
+			var in3 = document.createElement("INPUT");
+			in3.id = "3";
+			in1.placeholder = "";
+			var in4 = document.createElement("INPUT");
+			in4.id = "4";
+			in1.placeholder = "";
+			var in5 = document.createElement("INPUT");
+			in5.id = "5";
+			in1.placeholder = "";
+			var in6 = document.createElement("INPUT");
+			in6.id = "6";
+			in1.placeholder = "";
+			var in7 = document.createElement("INPUT");
+			in7.id = "7";
+			in1.placeholder = "";
+			var in8 = document.createElement("INPUT");
+			in8.id = "8";
+			in1.placeholder = "";
+			var in9 = document.createElement("INPUT");
+			in9.id = "9";
+			in1.placeholder = "";
+			var inA = document.createElement("INPUT");
+			inA.id = "A";
+			in1.placeholder = "";
+			var inB = document.createElement("INPUT");
+			inB.id = "B";
+			in1.placeholder = "";
+			var inC = document.createElement("INPUT");
+			inC.id = "C";
+			in1.placeholder = "";
+			var inD = document.createElement("INPUT");
+			inD.id = "D";
+			in1.placeholder = "";
+
+			var element = document.getElementById("fields");
+			element.appendChild(br);
+			element.appendChild(in1);
+			element.appendChild(br);
+			element.appendChild(in2);
+			element.appendChild(br);
+			element.appendChild(in3);
+			element.appendChild(br);
+			element.appendChild(in4);
+			element.appendChild(br);
+			element.appendChild(in5);
+			element.appendChild(br);
+			element.appendChild(in6);
+			element.appendChild(br);
+			element.appendChild(in7);
+			element.appendChild(br);
+			element.appendChild(in8);
+			element.appendChild(br);
+			element.appendChild(in9);
+			element.appendChild(br);
+			element.appendChild(inA);
+			element.appendChild(br);
+			element.appendChild(inB);
+			element.appendChild(br);
+			element.appendChild(inC);
+			element.appendChild(br);
+			element.appendChild(inD);
 
 			break;
 		default:
@@ -203,5 +324,8 @@
         window.location.href = "../documentDisplay/" + queryString;
     }
 </script>
+		<!-- </div>
+	</div> -->
+</div>
 </body>
 </html>
