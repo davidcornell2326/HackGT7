@@ -60,7 +60,7 @@ public class Main {
 
   @RequestMapping("/")
   String index() {
-    return "index";
+    return "home";
   }
 
   @RequestMapping("/testpage")
@@ -76,14 +76,14 @@ public class Main {
       return "hello";
   }
 
-  @RequestMapping("/test")
-  String test() {
-      return "test";
+  @RequestMapping("/userEntry")
+  String userEntry() {
+      return "userEntry";
   }
   
-  @RequestMapping("/test2/*")
-  String test2() {
-      return "test2";
+  @RequestMapping("/documentDisplay/*")
+  String documentDisplay() {
+      return "documentDisplay";
   }
 
   @RequestMapping("/db")

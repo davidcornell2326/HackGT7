@@ -4,7 +4,7 @@
 <title>Acknowledgement</title>
 </head>
 <body>
-<h4>These are the data from page1.html.</h4>
+<h4>These are the data from the user entry page, which can be manipulated in this html file's javascript.</h4>
 <script>
  
 var queryString = decodeURIComponent(window.location.search);
@@ -15,6 +15,13 @@ for (var i = 0; i < queries.length; i++)
   document.write(queries[i] + "<br>");
 }
  
-</script> 
+function goToHome() {
+  	window.location.href = "../";
+}
+
+
+</script>
+
+<button onclick="goToHome()">Go to the Home Page</button>
 </body>
 </html>

@@ -6,12 +6,12 @@
 <body>
 
 
-<input type="text" id="1">
-<input type="text" id="2">
-<input type="text" id="3">
-<input type="text" id="4">
-<input type="text" id="5">
-<button onclick="myFunction()">Click</button>
+<input type="text" id="1"><br>
+<input type="text" id="2"><br>
+<input type="text" id="3"><br>
+<input type="text" id="4"><br>
+<input type="text" id="5"><br>
+<button onclick="myFunction()">Change History</button>
 
 
 <script>
@@ -21,8 +21,8 @@
         var value3=document.getElementById("3").value;
         var value4=document.getElementById("4").value;
         var value5=document.getElementById("5").value;
-        var queryString = "?para1=" + value1 + "&para2=" + value2 + "&para3=" + value3 + "&para4=" + value4 + "&para5=" + value5;
-        window.location.href = "test2/" + queryString;
+        var queryString = "?1=" + value1 + "&2=" + value2 + "&3=" + value3 + "&4=" + value4 + "&5=" + value5;
+        window.location.href = "documentDisplay/" + queryString;
     }
 </script> 
 </body>
