@@ -5,6 +5,21 @@
 </head>
 <body>
 
+<style>
+.bar {
+    overflow-x: hidden;
+}
+
+.container {
+    display: table;
+}
+
+.contents {
+    display: table-cell;
+    vertical-align: middle;
+}
+</style>
+
 <link rel="stylesheet" type="text/css" href="/stylesheets/Website.css">
 
 		<h1 class="header" id="name">
@@ -20,188 +35,196 @@
 
 <button onclick="displayDocument()" id="changeHistory">Change History</button>
 
+<div style="object-position:center">
+	<!-- <div class="container">
+		<div class="contents"> -->
 
-<script>
+			<script>
 
-	var queryString = decodeURIComponent(window.location.search);
-	docName = queryString.substring(5);
-	console.log(docName);
-	var br = document.createElement("BR");
+				var queryString = decodeURIComponent(window.location.search);
+				docName = queryString.substring(5);
+				console.log(docName);
+				var br = document.createElement("BR");
+				switch(docName) {
+					case "constitutionPreamble":
+						var txt1 = document.createTextNode("People:");
+						var in1 = document.createElement("INPUT");
+						in1.id = "1";
+						var txt2 = document.createTextNode("United States:");
+						var in2 = document.createElement("INPUT");
+						in2.id = "2";
+						var txt3 = document.createTextNode("perfect:");
+						var in3 = document.createElement("INPUT");
+						in3.id = "3";
+						var txt4 = document.createTextNode("Justice:");
+						var in4 = document.createElement("INPUT");
+						in4.id = "4";
+						var txt5 = document.createTextNode("Tranquility:");
+						var in5 = document.createElement("INPUT");
+						in5.id = "5";
+						var txt6 = document.createTextNode("Defence:");
+						var in6 = document.createElement("INPUT");
+						in6.id = "6";
+						var txt7 = document.createTextNode("Blessings:");
+						var in7 = document.createElement("INPUT");
+						in7.id = "7";
+						var txt8 = document.createTextNode("Liberty:");
+						var in8 = document.createElement("INPUT");
+						in8.id = "8";
+						var txt9 = document.createTextNode("Posterity:");
+						var in9 = document.createElement("INPUT");
+						in9.id = "9";
+						var txtA = document.createTextNode("Ordain:");
+						var inA = document.createElement("INPUT");
+						inA.id = "A";
+						var txtB = document.createTextNode("Constitution:");
+						var inB = document.createElement("INPUT");
+						inB.id = "B";
+						var txtC = document.createTextNode("America:");
+						var inC = document.createElement("INPUT");
+						inC.id = "C";
 
-	switch(docName) {
-		case "constitutionPreamble":
-			var txt1 = document.createTextNode("People:");
-			var in1 = document.createElement("INPUT");
-			in1.id = "1";
-			var txt2 = document.createTextNode("United States");
-			var in2 = document.createElement("INPUT");
-			in2.id = "2";
-			var txt3 = document.createTextNode("perfect");
-			var in3 = document.createElement("INPUT");
-			in3.id = "3";
-			var txt4 = document.createTextNode("Justice");
-			var in4 = document.createElement("INPUT");
-			in4.id = "4";
-			var txt5 = document.createTextNode("Tranquility");
-			var in5 = document.createElement("INPUT");
-			in5.id = "5";
-			var txt6 = document.createTextNode("defence");
-			var in6 = document.createElement("INPUT");
-			in6.id = "6";
-			var txt7 = document.createTextNode("Blessings");
-			var in7 = document.createElement("INPUT");
-			in7.id = "7";
-			var txt8 = document.createTextNode("Liberty");
-			var in8 = document.createElement("INPUT");
-			in8.id = "8";
-			var txt9 = document.createTextNode("Posterity");
-			var in9 = document.createElement("INPUT");
-			in9.id = "9";
-			var txtA = document.createTextNode("ordain");
-			var inA = document.createElement("INPUT");
-			inA.id = "A";
-			var txtB = document.createTextNode("Constitution");
-			var inB = document.createElement("INPUT");
-			inB.id = "B";
-			var txtC = document.createTextNode("America");
-			var inC = document.createElement("INPUT");
-			inC.id = "C";
+						var element = document.getElementById("fields");
+						element.style.textAlign="center"
+						element.appendChild(br);
+						element.appendChild(txt1);
+						element.appendChild(in1);
+						element.appendChild(br);
+						element.appendChild(txt2);
+						element.appendChild(in2);
+						element.appendChild(br);
+						element.appendChild(txt3);
+						element.appendChild(in3);
+						element.appendChild(br);
+						element.appendChild(txt4);
+						element.appendChild(in4);
+						element.appendChild(br);
+						element.appendChild(txt5);
+						element.appendChild(in5);
+						element.appendChild(br);
+						element.appendChild(txt6);
+						element.appendChild(in6);
+						element.appendChild(br);
+						element.appendChild(txt7);
+						element.appendChild(in7);
+						element.appendChild(br);
+						element.appendChild(txt8);
+						element.appendChild(in8);
+						element.appendChild(br);
+						element.appendChild(txt9);
+						element.appendChild(in9);
+						element.appendChild(br);
+						element.appendChild(txtA);
+						element.appendChild(inA);
+						element.appendChild(br);
+						element.appendChild(txtB);
+						element.appendChild(inB);
+						element.appendChild(br);
+						element.appendChild(txtC);
+						element.appendChild(inC);
+						break;
+					case "declarationPreamble":
+						var txt1 = document.createTextNode("Events:");
+						var in1 = document.createElement("INPUT");
+						in1.id = "1";
+						var txt2 = document.createTextNode("Dissolve:");
+						var in2 = document.createElement("INPUT");
+						in2.id = "2";
+						var txt3 = document.createTextNode("Political");
+						var in3 = document.createElement("INPUT");
+						in3.id = "3";
+						var txt4 = document.createTextNode("Another:");
+						var in4 = document.createElement("INPUT");
+						in4.id = "4";
+						var txt5 = document.createTextNode("Earth:");
+						var in5 = document.createElement("INPUT");
+						in5.id = "5";
+						var txt6 = document.createTextNode("Equal:");
+						var in6 = document.createElement("INPUT");
+						in6.id = "6";
+						var txt7 = document.createTextNode("Laws:");
+						var in7 = document.createElement("INPUT");
+						in7.id = "7";
+						var txt8 = document.createTextNode("Nature:");
+						var in8 = document.createElement("INPUT");
+						in8.id = "8";
+						var txt9 = document.createTextNode("God:");
+						var in9 = document.createElement("INPUT");
+						in9.id = "9";
+						var txtA = document.createTextNode("Opinions:");
+						var inA = document.createElement("INPUT");
+						inA.id = "A";
 
-			var element = document.getElementById("fields");
-			element.appendChild(br);
-			element.appendChild(txt1);
-			element.appendChild(in1);
-			element.appendChild(br);
-			element.appendChild(txt2);
-			element.appendChild(in2);
-			element.appendChild(br);
-			element.appendChild(txt3);
-			element.appendChild(in3);
-			element.appendChild(br);
-			element.appendChild(txt4);
-			element.appendChild(in4);
-			element.appendChild(br);
-			element.appendChild(txt5);
-			element.appendChild(in5);
-			element.appendChild(br);
-			element.appendChild(txt6);
-			element.appendChild(in6);
-			element.appendChild(br);
-			element.appendChild(txt7);
-			element.appendChild(in7);
-			element.appendChild(br);
-			element.appendChild(txt8);
-			element.appendChild(in8);
-			element.appendChild(br);
-			element.appendChild(txt9);
-			element.appendChild(in9);
-			element.appendChild(br);
-			element.appendChild(txtA);
-			element.appendChild(inA);
-			element.appendChild(br);
-			element.appendChild(txtB);
-			element.appendChild(inB);
-			element.appendChild(br);
-			element.appendChild(txtC);
-			element.appendChild(inC);
-			break;
-		case "declarationPreamble":
-			var txt1 = document.createTextNode("events:");
-			var in1 = document.createElement("INPUT");
-			in1.id = "1";
-			var txt2 = document.createTextNode("dissolve");
-			var in2 = document.createElement("INPUT");
-			in2.id = "2";
-			var txt3 = document.createTextNode("political");
-			var in3 = document.createElement("INPUT");
-			in3.id = "3";
-			var txt4 = document.createTextNode("another");
-			var in4 = document.createElement("INPUT");
-			in4.id = "4";
-			var txt5 = document.createTextNode("earth");
-			var in5 = document.createElement("INPUT");
-			in5.id = "5";
-			var txt6 = document.createTextNode("equal");
-			var in6 = document.createElement("INPUT");
-			in6.id = "6";
-			var txt7 = document.createTextNode("Laws");
-			var in7 = document.createElement("INPUT");
-			in7.id = "7";
-			var txt8 = document.createTextNode("Nature");
-			var in8 = document.createElement("INPUT");
-			in8.id = "8";
-			var txt9 = document.createTextNode("God");
-			var in9 = document.createElement("INPUT");
-			in9.id = "9";
-			var txtA = document.createTextNode("opinions");
-			var inA = document.createElement("INPUT");
-			inA.id = "A";
+						var element = document.getElementById("fields");
+						element.style.textAlign="center"
+						// element.style.t
+						element.appendChild(br);
+						element.appendChild(txt1);
+						element.appendChild(in1);
+						element.appendChild(br);
+						element.appendChild(txt2);
+						element.appendChild(in2);
+						element.appendChild(br);
+						element.appendChild(txt3);
+						element.appendChild(in3);
+						element.appendChild(br);
+						element.appendChild(txt4);
+						element.appendChild(in4);
+						element.appendChild(br);
+						element.appendChild(txt5);
+						element.appendChild(in5);
+						element.appendChild(br);
+						element.appendChild(txt6);
+						element.appendChild(in6);
+						element.appendChild(br);
+						element.appendChild(txt7);
+						element.appendChild(in7);
+						element.appendChild(br);
+						element.appendChild(txt8);
+						element.appendChild(in8);
+						element.appendChild(br);
+						element.appendChild(txt9);
+						element.appendChild(in9);
+						element.appendChild(br);
+						element.appendChild(txtA);
+						element.appendChild(inA);
 
-			var element = document.getElementById("fields");
-			element.appendChild(br);
-			element.appendChild(txt1);
-			element.appendChild(in1);
-			element.appendChild(br);
-			element.appendChild(txt2);
-			element.appendChild(in2);
-			element.appendChild(br);
-			element.appendChild(txt3);
-			element.appendChild(in3);
-			element.appendChild(br);
-			element.appendChild(txt4);
-			element.appendChild(in4);
-			element.appendChild(br);
-			element.appendChild(txt5);
-			element.appendChild(in5);
-			element.appendChild(br);
-			element.appendChild(txt6);
-			element.appendChild(in6);
-			element.appendChild(br);
-			element.appendChild(txt7);
-			element.appendChild(in7);
-			element.appendChild(br);
-			element.appendChild(txt8);
-			element.appendChild(in8);
-			element.appendChild(br);
-			element.appendChild(txt9);
-			element.appendChild(in9);
-			element.appendChild(br);
-			element.appendChild(txtA);
-			element.appendChild(inA);
-
-			break;
-		default:
-			break;
-	}
+						break;
+					default:
+						break;
+				}
 
 
 
 
-    function displayDocument() {
-        try { var value1=document.getElementById("1").value; } catch(err) {var value1=""} finally{}
-        try { var value2=document.getElementById("2").value; } catch(err) {var value2=""} finally{}
-        try { var value3=document.getElementById("3").value; } catch(err) {var value3=""} finally{}
-        try { var value4=document.getElementById("4").value; } catch(err) {var value4=""} finally{}
-        try { var value5=document.getElementById("5").value; } catch(err) {var value5=""} finally{}
-        try { var value6=document.getElementById("6").value; } catch(err) {var value6=""} finally{}
-        try { var value7=document.getElementById("7").value; } catch(err) {var value7=""} finally{}
-        try { var value8=document.getElementById("8").value; } catch(err) {var value8=""} finally{}
-        try { var value9=document.getElementById("9").value; } catch(err) {var value9=""} finally{}
-        try { var valueA=document.getElementById("A").value; } catch(err) {var valueA=""} finally{}
-        try { var valueB=document.getElementById("B").value; } catch(err) {var valueB=""} finally{}
-        try { var valueC=document.getElementById("C").value; } catch(err) {var valueC=""} finally{}
-        try { var valueD=document.getElementById("D").value; } catch(err) {var valueD=""} finally{}
-        try { var valueE=document.getElementById("E").value; } catch(err) {var valueE=""} finally{}
-        try { var valueF=document.getElementById("F").value; } catch(err) {var valueF=""} finally{}
-        try { var valueG=document.getElementById("G").value; } catch(err) {var valueG=""} finally{}
-        try { var valueH=document.getElementById("H").value; } catch(err) {var valueH=""} finally{}
-        try { var valueI=document.getElementById("I").value; } catch(err) {var valueH=""} finally{}
-        try { var valueJ=document.getElementById("J").value; } catch(err) {var valueJ=""} finally{}
-        try { var valueK=document.getElementById("K").value; } catch(err) {var valueK=""} finally{}
-        var queryString = decodeURIComponent(window.location.search);
-        queryString += "&1=" + value1 + "&2=" + value2 + "&3=" + value3 + "&4=" + value4 + "&5=" + value5 + "&6=" + value6 + "&7=" + value7 + "&8=" + value8 + "&9=" + value9 + "&A=" + valueA + "&B=" + valueB + "&C=" + valueC + "&D=" + valueD + "&E=" + valueE + "&F=" + valueF + "&G=" + valueG + "&H=" + valueH + "&I=" + valueI + "&J=" + valueJ + "&K=" + valueK;
-        window.location.href = "../documentDisplay/" + queryString;
-    }
-</script>
+			    function displayDocument() {
+			        try { var value1=document.getElementById("1").value; } catch(err) {var value1=""} finally{}
+			        try { var value2=document.getElementById("2").value; } catch(err) {var value2=""} finally{}
+			        try { var value3=document.getElementById("3").value; } catch(err) {var value3=""} finally{}
+			        try { var value4=document.getElementById("4").value; } catch(err) {var value4=""} finally{}
+			        try { var value5=document.getElementById("5").value; } catch(err) {var value5=""} finally{}
+			        try { var value6=document.getElementById("6").value; } catch(err) {var value6=""} finally{}
+			        try { var value7=document.getElementById("7").value; } catch(err) {var value7=""} finally{}
+			        try { var value8=document.getElementById("8").value; } catch(err) {var value8=""} finally{}
+			        try { var value9=document.getElementById("9").value; } catch(err) {var value9=""} finally{}
+			        try { var valueA=document.getElementById("A").value; } catch(err) {var valueA=""} finally{}
+			        try { var valueB=document.getElementById("B").value; } catch(err) {var valueB=""} finally{}
+			        try { var valueC=document.getElementById("C").value; } catch(err) {var valueC=""} finally{}
+			        try { var valueD=document.getElementById("D").value; } catch(err) {var valueD=""} finally{}
+			        try { var valueE=document.getElementById("E").value; } catch(err) {var valueE=""} finally{}
+			        try { var valueF=document.getElementById("F").value; } catch(err) {var valueF=""} finally{}
+			        try { var valueG=document.getElementById("G").value; } catch(err) {var valueG=""} finally{}
+			        try { var valueH=document.getElementById("H").value; } catch(err) {var valueH=""} finally{}
+			        try { var valueI=document.getElementById("I").value; } catch(err) {var valueH=""} finally{}
+			        try { var valueJ=document.getElementById("J").value; } catch(err) {var valueJ=""} finally{}
+			        try { var valueK=document.getElementById("K").value; } catch(err) {var valueK=""} finally{}
+			        var queryString = decodeURIComponent(window.location.search);
+			        queryString += "&1=" + value1 + "&2=" + value2 + "&3=" + value3 + "&4=" + value4 + "&5=" + value5 + "&6=" + value6 + "&7=" + value7 + "&8=" + value8 + "&9=" + value9 + "&A=" + valueA + "&B=" + valueB + "&C=" + valueC + "&D=" + valueD + "&E=" + valueE + "&F=" + valueF + "&G=" + valueG + "&H=" + valueH + "&I=" + valueI + "&J=" + valueJ + "&K=" + valueK;
+			        window.location.href = "../documentDisplay/" + queryString;
+			    }
+			</script>
+		<!-- </div>
+	</div> -->
+</div>
 </body>
 </html>
