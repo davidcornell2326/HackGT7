@@ -61,6 +61,31 @@ button {
     position: absolute;
 }
 
+input {
+    font-family: Baskerville;
+    font-size: 1em;
+    color: white;
+    text-shadow: 2px 2px black;
+    background: #1234;
+    align-content: center;
+    position: relative;
+    top: 40px;
+    left: 45%;
+    margin-bottom: 25px;
+}
+#changeHistory {
+    position: absolute;
+    z-index: 0;
+    left: 43%;
+    top: 100%;
+    top: 600px;
+    transform: translateY(-100%);
+}
+p {
+    width: 1920px;
+    height:580px;
+}
+
 
 #Documents {
     top: 20px;
