@@ -36,7 +36,7 @@
             if (queries[i].substring(2) === "") {
                 queries[i] = queries[i].substring(0,2) + "EMPTY";
             }
-            docText = docText.replace(changeWords[i], queries[i].substring(2));
+            docText = docText.replaceAll(changeWords[i], queries[i].substring(2));
         }
         document.getElementById("docName").innerHTML = docName;
         document.getElementById("docText").innerHTML = docText;
