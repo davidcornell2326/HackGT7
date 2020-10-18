@@ -6,6 +6,10 @@ html {
 	-ms-text-size-adjust:     100%;
 }
 
+::placeholder {
+  color: lightgrey;
+}
+
 h1 {
     font-family: Baskerville, sans-serif;
     font-size: 2.5em;
