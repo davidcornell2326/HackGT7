@@ -33,7 +33,7 @@
 <div id="fields">
 </div>
 
-<button onclick="displayDocument()" id="changeHistory">Change History</button>
+
 
 <div style="object-position:center">
 	<!-- <div class="container">
@@ -44,7 +44,6 @@
 	var queryString = decodeURIComponent(window.location.search);
 	docName = queryString.substring(5);
 	console.log(docName);
-	var br = document.createElement("BR");
 
 	switch(docName) {
 		case "constitutionPreamble":
@@ -110,30 +109,24 @@
 			inC.placeholder = "Country";
 
 			var element = document.getElementById("fields");
-			element.appendChild(br);
 			element.appendChild(in1);
-			element.appendChild(br);
 			element.appendChild(in2);
-			element.appendChild(br);
 			element.appendChild(in3);
-			element.appendChild(br);
 			element.appendChild(in4);
-			element.appendChild(br);
 			element.appendChild(in5);
-			element.appendChild(br);
 			element.appendChild(in6);
-			element.appendChild(br);
 			element.appendChild(in7);
-			element.appendChild(br);
 			element.appendChild(in8);
-			element.appendChild(br);
 			element.appendChild(in9);
-			element.appendChild(br);
 			element.appendChild(inA);
-			element.appendChild(br);
 			element.appendChild(inB);
-			element.appendChild(br);
 			element.appendChild(inC);
+
+			var btn = document.createElement("BUTTON");
+			btn.id="changeMOREhistory";
+			btn.onclick=function() {displayDocument()};
+			btn.innerHTML="Change History";
+			element.appendChild(btn);
 			break;
 		case "declarationPreamble":
 
@@ -188,27 +181,22 @@
 			inA.placeholder = "Plural Noun";
 
 			var element = document.getElementById("fields");
-			element.appendChild(br);
 			element.appendChild(in1);
-			element.appendChild(br);
 			element.appendChild(in2);
-			element.appendChild(br);
 			element.appendChild(in3);
-			element.appendChild(br);
 			element.appendChild(in4);
-			element.appendChild(br);
 			element.appendChild(in5);
-			element.appendChild(br);
 			element.appendChild(in6);
-			element.appendChild(br);
 			element.appendChild(in7);
-			element.appendChild(br);
 			element.appendChild(in8);
-			element.appendChild(br);
 			element.appendChild(in9);
-			element.appendChild(br);
 			element.appendChild(inA);
 
+			var btn = document.createElement("BUTTON");
+			btn.id="changeMOREhistory";
+			btn.onclick=function() {displayDocument()};
+			btn.innerHTML="Change History";
+			element.appendChild(btn);
 			break;
 			case "billPreamble":
 			
@@ -263,26 +251,22 @@
 			inA.placeholder = "Body of Writing";
 
 			var element = document.getElementById("fields");
-			element.appendChild(br);
 			element.appendChild(in1);
-			element.appendChild(br);
 			element.appendChild(in2);
-			element.appendChild(br);
 			element.appendChild(in3);
-			element.appendChild(br);
 			element.appendChild(in4);
-			element.appendChild(br);
 			element.appendChild(in5);
-			element.appendChild(br);
 			element.appendChild(in6);
-			element.appendChild(br);
 			element.appendChild(in7);
-			element.appendChild(br);
 			element.appendChild(in8);
-			element.appendChild(br);
 			element.appendChild(in9);
-			element.appendChild(br);
 			element.appendChild(inA);
+
+			var btn = document.createElement("BUTTON");
+			btn.id="changeMOREhistory";
+			btn.onclick=function() {displayDocument()};
+			btn.innerHTML="Change History";
+			element.appendChild(btn);
 			break;
 
 			case "hamlet":
@@ -353,38 +337,29 @@
 			inD.placeholder = "Noun";
 
 			var element = document.getElementById("fields");
-			element.appendChild(br);
 			element.appendChild(in1);
-			element.appendChild(br);
 			element.appendChild(in2);
-			element.appendChild(br);
 			element.appendChild(in3);
-			element.appendChild(br);
 			element.appendChild(in4);
-			element.appendChild(br);
 			element.appendChild(in5);
-			element.appendChild(br);
 			element.appendChild(in6);
-			element.appendChild(br);
 			element.appendChild(in7);
-			element.appendChild(br);
 			element.appendChild(in8);
-			element.appendChild(br);
 			element.appendChild(in9);
-			element.appendChild(br);
 			element.appendChild(inA);
-			element.appendChild(br);
 			element.appendChild(inB);
-			element.appendChild(br);
 			element.appendChild(inC);
-			element.appendChild(br);
 			element.appendChild(inD);
 
+			var btn = document.createElement("BUTTON");
+			btn.id="changeMOREhistory";
+			btn.onclick=function() {displayDocument()};
+			btn.innerHTML="Change History";
+			element.appendChild(btn);
 			break;
 		default:
 			break;
 	}
-
 
 
 
