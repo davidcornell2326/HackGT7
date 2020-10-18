@@ -6,6 +6,31 @@
             Generated Document
         </title>
     </head>
+
+    <style>
+
+
+    .center {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 30px;
+        cursor: pointer;
+        font-size: 20px;
+        position: absolute;
+        z-index: 0;
+        display: block;
+        left: 43%;
+        top: 100%;
+        top: 450;
+        transform: translateY(-100%);
+    }
+    /* Darker background on mouse-over */
+    .center:hover {
+      background-color: RoyalBlue;
+    }
+
+    </style>
     <body>
 
         <h2 id="docName">Temp</h2>
@@ -17,7 +42,7 @@
         <button id="homePage" onclick="goToHome()">Go to the Home Page</button>
 
         <script>
- 
+
         var queryString = decodeURIComponent(window.location.search);
         queryString = queryString.substring(1);
         var queries = queryString.split("&");
@@ -49,17 +74,27 @@
             window.location.href = "../";
         }
 
+        function downloadCreation() {
+            linkedText = docText + "\n\n\n\n\nGapsInHistory.xyz"
+            var textToSaveAsBlob = new Blob([linkedText], {type:"text/plain"});
+            var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+            var downloadLink = document.createElement("a");
+            downloadLink.download = "gaps_in_history.txt";
+            downloadLink.innerHTML = "Download File";
+            downloadLink.href = textToSaveAsURL;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+
+            downloadLink.click();
+        }
+
 
     </script>
+    <button class="center" onclick="downloadCreation()"><i class="fa fa-download"></i>Download Creation</button>
+    <!-- <input class="center" type="button" id="dwn-btn" value="Download Creation"/> -->
 
-         
     </body>
 
 
-
-
-
-
-    
 
 </html>
