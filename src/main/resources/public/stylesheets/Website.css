@@ -81,7 +81,7 @@ input {
     background: #1234;
     align-content: center;
     position: relative;
-    top: 40px;
+    top: 20px;
     left: 44%;
     margin-bottom: 25px;
     display: block;
@@ -89,6 +89,8 @@ input {
 #changeMOREhistory {
     display: block;
     object-position: center;
+    left: 42%;
+    top: 700px;
 }
 #changeHistory {
     position: absolute;
@@ -103,9 +105,9 @@ input {
     position: absolute;
     z-index: 0;
     display: block;
-    left: 43%;
+    right: 0px;
     top: 100%;
-    top: 600px;
+    top: 700px;
     transform: translateY(-100%);
 }
 p {
@@ -191,6 +193,21 @@ p {
     #avatar {
         top: 160;
     }
+    #changeMOREhistory {
+        display: block;
+        object-position: center;
+        left: 42%;
+        top: 650px;
+    }
+    h6 {
+        font-family: Baskerville;
+        color: black;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 50;
+        font-size: 1.2em;
+    }
 }
 
 @media screen and (min-width: 1300px) {
@@ -226,5 +243,20 @@ p {
     }
     h5 {
         font-size: 3em;
+    }
+    #changeMOREhistory {
+        display: block;
+        object-position: center;
+        left: 42%;
+        top: 700px;
+    }
+    h6 {
+        font-family: Baskerville;
+        color: black;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 50;
+        font-size: 1.5em;
     }
 }
