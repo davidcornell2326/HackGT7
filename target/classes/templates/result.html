@@ -6,6 +6,31 @@
             Generated Document
         </title>
     </head>
+
+    <style>
+
+
+    .center {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 30px;
+        cursor: pointer;
+        font-size: 20px;
+        position: absolute;
+        z-index: 0;
+        display: block;
+        left: 43%;
+        top: 100%;
+        top: 450;
+        transform: translateY(-100%);
+    }
+    /* Darker background on mouse-over */
+    .center:hover {
+      background-color: RoyalBlue;
+    }
+
+    </style>
     <body>
 
         <h2 id="docName">Temp</h2>
@@ -17,7 +42,7 @@
         <button id="homePage" onclick="goToHome()">Go to the Home Page</button>
 
         <script>
- 
+
         var queryString = decodeURIComponent(window.location.search);
         queryString = queryString.substring(1);
         var queries = queryString.split("&");
@@ -28,11 +53,19 @@
         if (docName === "constitutionPreamble") {
             docName = "Constitution Preamble";
             var docText = "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.";
-            var changeWords = ["People", "United States", "perfect", "Justice", "Tranquility", "defence", "Blessings of Liberty", "Posterity",  "ordain", "Constitution", "America"];
+            var changeWords = ["People", "United States", "perfect", "Justice", "Tranquility", "defence", "Blessings", "Liberty", "Posterity",  "ordain", "Constitution", "America"];
         } else if (docName === "declarationPreamble") {
             docName = "Declaration of Independence Preamble";
             var docText = "When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.";
             var changeWords = ["events", "dissolve", "political", "another", "earth", "equal", "Laws", "Nature", "God", "opinions"];
+        } else if (docName === "billPreamble") {
+            docName = "Bill of Rights Preamble";
+            var docText = "The Conventions of a number of the States, having at the time of their adopting the Constitution, expressed a desire, in order to prevent misconstruction or abuse of its powers, that further declaratory and restrictive clauses should be added: And as extending the ground of public confidence in the Government, will best ensure the beneficent ends of its institution.\nResolved by the Senate and House of Representatives of the United States of America, in Congress assembled, two thirds of both Houses concurring, that the following Articles be proposed to the Legislatures of the several States, as amendments to the Constitution of the United States, all, or any of which Articles, when ratified by three fourths of the said Legislatures, to be valid to all intents and purposes, as part of the said Constitution; viz.\nArticles in addition to, and Amendment of the Constitution of the United States of America, proposed by Congress, and ratified by the Legislatures of the several States, pursuant to the fifth Article of the original Constitution.";
+            var changeWords = ["States", "Constitution", "restrictive", "Government", "beneficent", "United States", "America", "two thirds", "three fourths", "Article"];
+        } else if (docName === "hamlet") {
+            docName = "Hamlet: To Be or Not To Be";
+            var docText = "To be, or not to be, that is the question:\nWhether 'tis nobler in the mind to suffer\nThe slings and arrows of outrageous fortune,\nOr to take arms against a sea of troubles\nAnd by opposing end them. To die—to sleep,\nNo more; and by a sleep to say we end\nThe heart-ache and the thousand natural shocks\nThat flesh is heir to: 'tis a consummation\nDevoutly to be wish'd. To die, to sleep;\nTo sleep, perchance to dream—ay, there's the rub:\nFor in that sleep of death what dreams may come,\nWhen we have shuffled off this mortal coil,\nMust give us pause—there's the respect\nThat makes calamity of so long life."
+            var changeWords = ["question", "suffer", "slings", "arrows", "troubles", "die", "sleep", "heart-ache", "dream", "mortal coil", "respect", "long", "life"];
         }
 
         for (var i = 0; i < queries.length; i++) {
@@ -49,17 +82,27 @@
             window.location.href = "../";
         }
 
+        function downloadCreation() {
+            linkedText = docText + "\n\n\n\n\nGapsInHistory.xyz"
+            var textToSaveAsBlob = new Blob([linkedText], {type:"text/plain"});
+            var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+            var downloadLink = document.createElement("a");
+            downloadLink.download = "gaps_in_history.txt";
+            downloadLink.innerHTML = "Download File";
+            downloadLink.href = textToSaveAsURL;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+
+            downloadLink.click();
+        }
+
 
     </script>
+    <button class="center" onclick="downloadCreation()"><i class="fa fa-download"></i>Download Creation</button>
+    <!-- <input class="center" type="button" id="dwn-btn" value="Download Creation"/> -->
 
-         
     </body>
 
 
-
-
-
-
-    
 
 </html>
